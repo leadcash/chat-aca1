@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Benefits For Consumers</title>
+    <meta name="description" content="Get a $6400 Subsidy When You Call For a Free Health Plan"/>
+    <meta name="keywords" content="Affordable Care Act, ACA">
+    <link href="css/tailwind.css" rel="stylesheet" media="all"/>
+    <link href="css/style.css" rel="stylesheet" media="all"/>
+</head>
+
+<body>
+<input id="hdnApprovalStatus" type="hidden">
+<main class="min-h-screen">
+    <div class="max-w-4xl mx-auto bg-white text-center text-gray-600">
+        <div class="p-4">
+            <p class="font-serif text-md sm:text-lg font-bold mt-2"><span class="text-red-600">Warning:</span>
+                Enrollment closes on <span id="currentDate"></span> at midnight.</p>
+            <h2 class="font-bold text-xl sm:text-3xl mt-1"
+            >Unlock $6400 in Tax Credits for Americans to Cover Groceries, Gas, and Rent Expenses</h2>
+        </div>
+        <div class="w-full md:col-span-1 text-center block">
+            <div class=" text-sm flex items-center justify-center">
+			<span class="relative flex h-4 w-4 inline-flex mr-2">
+			  <span class="animate-ping absolute inline-flex h-full w-full rounded-full opacity-75 bg-green-500"></span>
+			  <span class="relative inline-flex rounded-full h-4 w-4 bg-green-500"></span>
+			</span>
+                Rachael is Online.
+            </div>
+        </div>
+    </div>
+
+    <div class="max-w-md mx-auto bg-white">
+        <div class="p-4">
+            <div class="space-y-4">
+                <div class="chat-container pb-2">
+                    <!-- Agent message -->
+                    <div id="agentBlock1" class="flex items-end w-5/6">
+                        <div class="flex-shrink-0">
+                            <img class="w-8 h-8 rounded-full" src="img/staff.jpeg" alt="Sender Avatar">
+                        </div>
+                        <div class="ml-3 agent-chat">
+                            <div id="initTyping" class="bg-gray-200 p-3 rounded-lg shadow-xs mt-2 inline-block">
+                                <div class="typing-animation">
+                                    <div class="typing-dot"></div>
+                                    <div class="typing-dot"></div>
+                                    <div class="typing-dot"></div>
+                                </div>
+                            </div>
+                            <div id="msg1" class="bg-gray-200 p-3 rounded-lg shadow-xs mt-2 w-fit hidden">
+                                <p class="text-md text-gray-800">Hi 👋</p>
+                            </div>
+                            <div id="msg2" class="bg-gray-200 p-3 rounded-lg shadow-xs mt-2 w-fit hidden">
+                                <p class="text-md text-gray-800">I'm Rachael from Health Benefits.</p>
+                            </div>
+                            <div id="msg3" class="bg-gray-200 p-3 rounded-lg shadow-xs mt-2 w-fit hidden">
+                                <p class="text-md text-gray-800">Want to find out if you qualify for up a $6400 subsidy
+                                    as a Health Credit? Tap Yes! 😃</p>
+                            </div>
+                            <div id="msg4" class="bg-gray-200 p-3 rounded-lg shadow-xs mt-2 w-fit hidden">
+                                <div class="">
+                                    <button class="chat-button text-white font-bold bg-blue-500 rounded-full py-3 px-12"
+                                            type="button" data-form-step="1" data-form-value="Yes">Yes
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- User message -->
+                    <div id="userBlock1" class="flex items-start justify-end pt-4 hidden">
+                        <div class="mr-3 receiver-chat">
+                            <div id="msg5" class="bg-blue-500 text-white p-3 rounded-lg shadow-xs mt-2 inline-block">
+                                <p class="text-md">Yes</p>
+                            </div>
+                        </div>
+                        <div class="flex-shrink-0">
+                            <img class="w-8 h-8 rounded-full" src="img/profile.avif" alt="Receiver Avatar">
+                        </div>
+                    </div>
+
+                    <!-- Agent message -->
+                    <div id="agentBlock2" class="flex items-end w-5/6 hidden pt-4">
+                        <div class="flex-shrink-0">
+                            <img class="w-8 h-8 rounded-full" src="img/staff.jpeg" alt="Sender Avatar">
+                        </div>
+                        <div class="ml-3 agent-chat">
+                            <div id="msg6" class="bg-gray-200 p-3 rounded-lg shadow-xs mt-2 w-fit hidden">
+                                <p class="text-md text-gray-800">Okay, let me ask you two quick questions.</p>
+                            </div>
+                            <div id="msg7" class="bg-gray-200 p-3 rounded-lg shadow-xs mt-2 w-fit hidden">
+                                <p class="text-md text-gray-800">Do you make less than $50,000/year? Tap Yes or No.</p>
+                            </div>
+                            <div id="msg8" class="bg-gray-200 p-3 rounded-lg shadow-xs mt-2 w-fit hidden">
+                                <div class="grid grid-rows-1 grid-cols-2 gap-x-3">
+                                    <button class="chat-button text-white font-bold bg-blue-500 rounded-full py-3 px-8"
+                                            type="button" data-form-step="2" data-form-value="Yes">Yes
+                                    </button>
+                                    <button class="chat-button text-white font-bold bg-blue-500 rounded-full py-3 px-8"
+                                            type="button" data-form-step="2" data-form-value="No">No
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- User message -->
+                    <div id="userBlock2" class="flex items-start justify-end hidden">
+                        <div class="mr-3 receiver-chat">
+                            <div class="bg-blue-500 text-white p-3 rounded-lg shadow-xs mt-2 inline-block">
+                                <p id="msg9yes" class="text-md hidden">Yes</p>
+                                <p id="msg9no" class="text-md hidden">No</p>
+                            </div>
+                        </div>
+                        <div class="flex-shrink-0">
+                            <img class="w-8 h-8 rounded-full" src="img/profile.avif" alt="Receiver Avatar">
+                        </div>
+                    </div>
+
+                    <!-- Agent message -->
+                    <div id="agentBlock3" class="flex items-end w-5/6 hidden pt-4">
+                        <div class="flex-shrink-0">
+                            <img class="w-8 h-8 rounded-full" src="img/staff.jpeg" alt="Sender Avatar">
+                        </div>
+
+                        <div class="ml-3 agent-chat">
+                            <div id="msg10" class="bg-gray-200 p-3 rounded-lg shadow-xs mt-2 w-fit hidden">
+                                <p class="text-md text-gray-800">Are you on medicaid or medicare?</p>
+                            </div>
+                            <div id="msg11" class="bg-gray-200 p-3 rounded-lg shadow-xs mt-2 w-fit hidden">
+                                <div class="grid grid-rows-2 grid-cols-1 gap-y-3">
+                                    <button class="chat-button text-white font-bold bg-blue-500 rounded-full py-3 px-8 funnel-complete-btn"
+                                            type="button" data-form-step="3" data-form-value="No">No
+                                    </button>
+                                    <button class="chat-button text-white font-bold bg-blue-500 rounded-full py-3 px-8"
+                                            type="button" data-form-step="3" id="medtrack" data-form-value="Yes">Yes
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- User message -->
+                    <div id="userBlock3" class="flex items-start justify-end hidden">
+                        <div class="mr-3 receiver-chat">
+                            <div class="bg-blue-500 text-white p-3 rounded-lg shadow-xs mt-2 inline-block">
+                                <p id="msg12yes" class="text-md hidden">Yes</p>
+                                <p id="msg12no" class="text-md hidden">No</p>
+                                <p id="msg12medicaid" class="text-md hidden">Yes</p>
+                            </div>
+                        </div>
+                        <div class="flex-shrink-0">
+                            <img class="w-8 h-8 rounded-full" src="img/profile.avif" alt="Receiver Avatar">
+                        </div>
+                    </div>
+
+                    <!-- Agent message -->
+                    <div id="agentBlock4" class="flex items-end w-5/6 hidden pt-4">
+                        <div class="flex-shrink-0">
+                            <img class="w-8 h-8 rounded-full" src="img/staff.jpeg" alt="Sender Avatar">
+                        </div>
+                        <div class="ml-3 agent-chat">
+                            <div id="msg13" class="bg-gray-200 p-3 rounded-lg shadow-xs mt-2 w-fit hidden">
+                                <p class="text-md text-gray-800">🎉 Congratulations! 🎁</p>
+                            </div>
+                            <div id="msg14" class="bg-gray-200 p-3 rounded-lg shadow-xs mt-2 w-fit hidden">
+                                <p id="msg14approved" class="text-md text-gray-800 hidden">You're pre-qualified for a
+                                    $6400 subsidy as a Health Credit.</p>
+                                <p id="msg14disapproved" class="text-md text-gray-800 hidden">You're pre-qualified for a
+                                    subsidy as a Health Credit.</p>
+                            </div>
+                            <div id="msg15" class="bg-gray-200 p-3 rounded-lg shadow-xs mt-2 w-fit hidden">
+                                <p class="text-md text-gray-800">You can use it for your grocery, rent, medical
+                                    expenses, and so on.</p>
+                            </div>
+                            <div id="msg16" class="bg-gray-200 p-3 rounded-lg shadow-xs mt-2 w-fit hidden">
+                                <p id="msg16approved" class="text-md text-gray-800 hidden">Tap the number button below
+                                    to call now to get your $6400 Health Credit, It only takes 2 minutes.</p>
+                                <p id="msg16disapproved" class="text-md text-gray-800 hidden">Tap the number button
+                                    below to call now to get your Health Credit, It only takes 2 minutes.</p>
+                            </div>
+                            <div id="msg17" class="bg-gray-200 p-3 rounded-lg shadow-xs mt-2 w-fit hidden">
+                                <p class="text-md text-gray-800 py-2">
+                                    <a id="PrimaryNumber"
+                                       href="tel:"
+                                       class="chat-button text-white font-bold bg-blue-500 rounded-full py-3 px-8 hidden ttc-button"
+                                    ></a>
+                                    <a id="DownsellNumber"
+                                       href="tel:"
+                                       class="chat-button text-white font-bold bg-blue-500 rounded-full py-3 px-8 hidden"
+                                    ></a>
+                                </p>
+                            </div>
+
+                            <div id="msg18" class="bg-gray-200 p-3 rounded-lg shadow-xs mt-2 w-fit hidden">
+                                <p class="text-md text-gray-800">Sorry, but the questions you answered have helped us
+                                    determine that we are not able to help you at this time.</p>
+                            </div>
+
+                            <div id="msg19" class="bg-gray-200 p-3 rounded-lg shadow-xs mt-2 w-fit hidden">
+                                <p class="text-md text-gray-800">Have a nice day! 😃</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="agentBlock5" class="flex items-end w-5/6 hidden pt-4">
+                        <div class="flex-shrink-0">
+                            <img class="w-8 h-8 rounded-full" src="img/staff.jpeg" alt="Sender Avatar">
+                        </div>
+                        <div class="ml-3 agent-chat">
+                            <div id="msg20" class="bg-gray-200 p-3 rounded-lg shadow-xs mt-2 w-fit hidden">
+                                <p class="text-md text-gray-800">🎉 Congratulations! 2nd Variant 🎁</p>
+                            </div>
+                            <div id="msg21" class="bg-gray-200 p-3 rounded-lg shadow-xs mt-2 w-fit hidden">
+                                <p id="msg21approved" class="text-md text-gray-800 hidden">You're pre-qualified for a
+                                    $6400 subsidy as a Health Credit.2nd Variant</p>
+                                <p id="msg21disapproved" class="text-md text-gray-800 hidden">You're pre-qualified for a
+                                    subsidy as a Health Credit.2nd Variant</p>
+                            </div>
+                            <div id="msg22" class="bg-gray-200 p-3 rounded-lg shadow-xs mt-2 w-fit hidden">
+                                <p class="text-md text-gray-800">You can use it for your grocery, rent, medical
+                                    expenses, and so on.2nd Variant</p>
+                            </div>
+                            <div id="msg23" class="bg-gray-200 p-3 rounded-lg shadow-xs mt-2 w-fit hidden">
+                                <p id="msg23approved" class="text-md text-gray-800 hidden">Tap the number button below
+                                    to call now to get your $6400 Health Credit, It only takes 2 minutes2nd Variant.</p>
+                                <p id="msg23disapproved" class="text-md text-gray-800 hidden">Tap the number button
+                                    below to call now to get your Health Credit, It only takes 2 minutes.2nd Variant</p>
+                            </div>
+                            <div id="msg24" class="bg-gray-200 p-3 rounded-lg shadow-xs mt-2 w-fit hidden">
+                                <p class="text-md text-gray-800 py-2">
+                                    <a id="PrimaryNumber1"
+                                       href="tel:"
+                                       class="chat-button text-white font-bold bg-blue-500 rounded-full py-3 px-8 hidden ttc-button"
+                                    ></a>
+                                    <a id="DownsellNumber1"
+                                       href="tel:"
+                                       class="chat-button text-white font-bold bg-blue-500 rounded-full py-3 px-8 hidden"
+                                    ></a>
+                                </p>
+                            </div>
+
+                            <div id="msg25" class="bg-gray-200 p-3 rounded-lg shadow-xs mt-2 w-fit hidden">
+                                <p class="text-md text-gray-800">Sorry, but the questions you answered have helped us
+                                    determine that we are not able to help you at this time.</p>
+                            </div>
+
+                            <div id="msg26" class="bg-gray-200 p-3 rounded-lg shadow-xs mt-2 w-fit hidden">
+                                <p class="text-md text-gray-800">Have a nice day! 😃</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Disconnect message -->
+                    <div id="disconnected" class="pt-2 hidden">
+                        <div class="relative flex py-5 items-center">
+                            <div class="flex-grow border-t border-gray-200"></div>
+                            <span class="flex-shrink mx-4 text-gray-300 text-xs">Chat Closed</span>
+                            <div class="flex-grow border-t border-gray-200"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer class="bg-gray-100 border-t border-t-1 border-t-gray-200 mt-8">
+    <div class="mx-auto max-w-7xl overflow-hidden px-6 py-8 lg:px-8 text-sm sm:text-md leading-5 sm:leading-6 text-gray-500">
+        <p class="text-center pb-8">This website is not affiliated with the Affordable Cares Act program or any other
+            government entity. The information provided on this website is for informational purposes only. It is not
+            intended to be, nor does it constitute any kind of financial advice. Please seek advice from a qualified
+            professional prior to making any financial decisions based on the information provided. This website acts as
+            an independent digital media &amp; advertising publisher. This webpage is formatted as an advertorial. An
+            advertorial is an advertisement that is written in an editorial news format. PLEASE BE AWARE THAT THIS IS AN
+            ADVERTISEMENT AND NOT AN ACTUAL NEWS ARTICLE, BLOG, OR CONSUMER PROTECTION UPDATE. This website MAY RECEIVE
+            PAID COMPENSATION FOR CLICKS OR SALES PRODUCED FROM THE CONTENT FOUND ON THIS WEBPAGE. This compensation may
+            affect which companies are displayed, the placement of advertisements, and their order of appearance. Any
+            information, discounts, or price quotations listed may not be applicable in your location or if certain
+            requirements are not met. Additionally, our advertisers may have additional qualification requirements.</p>
+        <p class="text-center pb-8">Our goal is to provide exceptional service. One of our agents may reach out to you
+            to discuss your order, ask for feedback, and/or see if you need any assistance with your products, services,
+            or plans, at the phone number you provided regardless of your do-not-call list status. You may opt-out of
+            further contact at any time by simply telling our customer service team that you would no longer like to be
+            contacted. In the event that our team is unable to reach you by phone, they may send you a text message
+            letting you know that we called. Both our text messages and phone calls may be sent or connected utilizing
+            automated software. Carrier charges may apply. You may opt-out of any future contact via text message by
+            replying anytime with "STOP".</p>
+
+        <p class="text-center pb-4 text-blue-400"><a href="#">Health Reform Basics 2022</a></p>
+        <p class="text-center pb-4 text-blue-400">
+            <span>
+                <a href="privacy.html" target="_blank">Privacy Policy</a> | <a href="term.html" target="_blank">Terms &amp; Conditions</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+<script src="js/jquery.min.js"></script>
+<script src="js"></script>
+</body>
+</html>
